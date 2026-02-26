@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin / Team Manager | Stellar Aviators Esports</title>
+    <meta name="description" content="Admin dashboard for team managers. Manage divisions, players, and approve cashouts.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="social-links">
+                <a href="admin.html" style="font-size: 0.75rem; font-weight: 600; color: var(--gold-primary);">Admin Panel</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">SA</div>
+                <div class="logo-text">
+                    STELLAR AVIATORS
+                    <span>ESPORTS</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li class="nav-item-dropdown">
+                        <a href="teams.html" class="nav-link has-dropdown">Teams</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="teams.html#codm">Call of Duty: Mobile</a></li>
+                            <li><a href="teams.html#mlbb">Mobile Legends: Bang Bang</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#organization" class="nav-link has-dropdown">Organization</a></li>
+                    <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+                    <li><a href="store.html" class="nav-link">Store</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="profile.html" class="btn btn-ghost">Dashboard</a>
+                    <a href="admin.html" class="btn btn-outline-gold">Admin</a>
+                    <a href="sign-in.html" class="btn btn-ghost">Account</a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Dashboard -->
+    <div class="dashboard admin-dashboard">
+        <aside class="dashboard-sidebar admin-sidebar">
+            <h3 class="dashboard-sidebar-title">Team Manager</h3>
+            <nav class="dashboard-sidebar-nav">
+                <a href="#divisions" class="dashboard-nav-link active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Divisions
+                </a>
+                <a href="#players" class="dashboard-nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    All Players
+                </a>
+                <a href="#cashouts" class="dashboard-nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    Approve Cashouts
+                </a>
+                <a href="index.html" class="dashboard-nav-link" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    Back to Site
+                </a>
+            </nav>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Admin / Team Manager</h1>
+                <span class="badge badge-gold">Esports Management</span>
+            </div>
+
+            <!-- Divisions Overview -->
+            <section id="divisions" class="admin-section">
+                <h2 class="section-title">All Divisions</h2>
+                <p class="section-subtitle" style="margin-bottom: 24px;">Manage rosters across both game divisions</p>
+
+                <div class="admin-divisions-grid">
+                    <div class="admin-division-card">
+                        <div class="admin-division-header">
+                            <span class="tag tag-game">CODM</span>
+                            <h3>Call of Duty: Mobile</h3>
+                            <p>4 players • Main Roster</p>
+                        </div>
+                        <a href="teams.html#codm" class="btn btn-outline btn-sm">View Roster</a>
+                    </div>
+                    <div class="admin-division-card">
+                        <div class="admin-division-header">
+                            <span class="tag tag-game">MLBB</span>
+                            <h3>Mobile Legends: Bang Bang</h3>
+                            <p>5 players • Main Roster</p>
+                        </div>
+                        <a href="teams.html#mlbb" class="btn btn-outline btn-sm">View Roster</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Players -->
+            <section id="players" class="admin-section">
+                <h2 class="section-title">All Players by Division</h2>
+                <p class="section-subtitle" style="margin-bottom: 24px;">Full roster list across all divisions</p>
+
+                <div class="admin-players-block">
+                    <h4 class="admin-subsection-title">Call of Duty: Mobile</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>Role</th>
+                                    <th>Division</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Player One</strong></td>
+                                    <td>Flex / Slayer</td>
+                                    <td><span class="tag tag-game">CODM</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Player Two</strong></td>
+                                    <td>Main AR</td>
+                                    <td><span class="tag tag-game">CODM</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Player Three</strong></td>
+                                    <td>SMG</td>
+                                    <td><span class="tag tag-game">CODM</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Player Four</strong></td>
+                                    <td>Sub</td>
+                                    <td><span class="tag tag-game">CODM</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="admin-players-block">
+                    <h4 class="admin-subsection-title">Mobile Legends: Bang Bang</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>Role</th>
+                                    <th>Division</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Player Alpha</strong></td>
+                                    <td>Exp Lane</td>
+                                    <td><span class="tag tag-game">MLBB</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Player Beta</strong></td>
+                                    <td>Jungler</td>
+                                    <td><span class="tag tag-game">MLBB</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Player Charlie</strong></td>
+                                    <td>Mid Lane</td>
+                                    <td><span class="tag tag-game">MLBB</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Player Delta</strong></td>
+                                    <td>Gold Lane</td>
+                                    <td><span class="tag tag-game">MLBB</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Player Echo</strong></td>
+                                    <td>Roamer</td>
+                                    <td><span class="tag tag-game">MLBB</span></td>
+                                    <td><span class="table-status approved">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Approve Cashouts -->
+            <section id="cashouts" class="admin-section">
+                <h2 class="section-title">Approve Cashouts</h2>
+                <p class="section-subtitle" style="margin-bottom: 24px;">Review and approve withdrawal requests from players</p>
+
+                <div class="table-wrapper">
+                    <table class="admin-cashout-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Player</th>
+                                <th>Division</th>
+                                <th>Points</th>
+                                <th>Peso Equivalent</th>
+                                <th>GCash</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Feb 20, 2026</td>
+                                <td><strong>John Doe</strong></td>
+                                <td><span class="tag tag-game">MLBB</span></td>
+                                <td>5,000</td>
+                                <td class="text-gold">&#8369;1,000.00</td>
+                                <td>0917 XXX XXXX</td>
+                                <td><span class="table-status under-review">Under Analysis</span></td>
+                                <td>
+                                    <div class="admin-action-buttons">
+                                        <button type="button" class="btn btn-primary btn-sm">Approve</button>
+                                        <button type="button" class="btn btn-secondary btn-sm">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Feb 15, 2026</td>
+                                <td><strong>Jane Smith</strong></td>
+                                <td><span class="tag tag-game">CODM</span></td>
+                                <td>3,000</td>
+                                <td class="text-gold">&#8369;600.00</td>
+                                <td>0918 XXX XXXX</td>
+                                <td><span class="table-status pending">Pending Review</span></td>
+                                <td>
+                                    <div class="admin-action-buttons">
+                                        <button type="button" class="btn btn-primary btn-sm">Approve</button>
+                                        <button type="button" class="btn btn-secondary btn-sm">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Feb 18, 2026</td>
+                                <td><strong>Player Alpha</strong></td>
+                                <td><span class="tag tag-game">MLBB</span></td>
+                                <td>2,500</td>
+                                <td class="text-gold">&#8369;500.00</td>
+                                <td>0919 XXX XXXX</td>
+                                <td><span class="table-status pending">Pending Review</span></td>
+                                <td>
+                                    <div class="admin-action-buttons">
+                                        <button type="button" class="btn btn-primary btn-sm">Approve</button>
+                                        <button type="button" class="btn btn-secondary btn-sm">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Feb 24, 2026</td>
+                                <td><strong>Player One</strong></td>
+                                <td><span class="tag tag-game">CODM</span></td>
+                                <td>2,500</td>
+                                <td class="text-gold">&#8369;500.00</td>
+                                <td>0920 XXX XXXX</td>
+                                <td><span class="table-status approved">Approved</span></td>
+                                <td><span class="text-muted" style="font-size: 0.75rem;">—</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2024 - 2026 Stellar Aviators Esports • Admin Panel
+                </div>
+                <div class="footer-legal">
+                    <a href="index.html">Back to Site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

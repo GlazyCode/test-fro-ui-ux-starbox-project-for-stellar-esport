@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Stellar Aviators Esports</title>
+    <meta name="description" content="Join Stellar Aviators Esports. Create your account and become part of our gaming community.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="social-links">
+                <a href="index.html" title="Home">Home</a>
+                <a href="teams.html" title="Teams">Teams</a>
+                <a href="store.html" title="Store">Store</a>
+                <a href="store.html" title="Store">Store</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">SA</div>
+                <div class="logo-text">
+                    STELLAR AVIATORS
+                    <span>ESPORTS</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li class="nav-item-dropdown">
+                        <a href="teams.html" class="nav-link has-dropdown">Teams</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="teams.html#codm">Call of Duty: Mobile</a></li>
+                            <li><a href="teams.html#mlbb">Mobile Legends: Bang Bang</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#organization" class="nav-link has-dropdown">Organization</a></li>
+                    <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+                    <li><a href="store.html" class="nav-link">Store</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="profile.html" class="btn btn-ghost">Dashboard</a>
+                    <a href="admin.html" class="btn btn-ghost">Admin</a>
+                    <a href="sign-in.html" class="btn btn-outline-gold">Account</a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Auth Main -->
+    <main class="auth-main" style="background: var(--bg-dark);">
+        <div class="auth-container">
+            <h1 class="auth-title">Create an account</h1>
+            <p class="auth-subtitle">
+                <a href="sign-in.html">
+                    Already have an account?
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </p>
+
+            <!-- OAuth Providers -->
+            <div class="auth-providers">
+                <button class="auth-provider-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                    Sign up with Google
+                </button>
+                <button class="auth-provider-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#9146FF"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+                    Sign up with Twitch
+                </button>
+            </div>
+
+            <div class="form-divider">
+                <span>Or sign up with your e-mail</span>
+            </div>
+
+            <!-- Sign Up Form -->
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-input" placeholder="Enter your username" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Create a password" required>
+                    <p class="form-hint">Must be at least 8 characters</p>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Confirm Password</label>
+                    <input type="password" class="form-input" placeholder="Confirm your password" required>
+                </div>
+
+                <!-- Game Division Selection -->
+                <div class="division-select">
+                    <label class="form-label">Choose Your Game Division *</label>
+                    <p class="form-hint" style="margin-bottom: 16px;">Select the game you will compete in</p>
+
+                    <label class="division-option">
+                        <input type="radio" name="game_division" value="codm" required>
+                        <span class="division-option-radio"></span>
+                        <div class="division-option-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21 6h-7.59l3.29-3.29L16 2l-4 4-4-4-.71.71L10.59 6H3a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h18a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 14H3V8h18v12zM9 10v8l7-4z"/></svg>
+                        </div>
+                        <div class="division-option-info">
+                            <h4>Call of Duty: Mobile</h4>
+                            <p>Battle Royale & Multiplayer</p>
+                        </div>
+                    </label>
+
+                    <label class="division-option">
+                        <input type="radio" name="game_division" value="mlbb" required>
+                        <span class="division-option-radio"></span>
+                        <div class="division-option-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <div class="division-option-info">
+                            <h4>Mobile Legends: Bang Bang</h4>
+                            <p>5v5 MOBA Action</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="form-group mt-4">
+                    <label class="form-checkbox">
+                        <input type="checkbox" required>
+                        <span style="font-size: 0.875rem; color: var(--text-secondary);">
+                            I agree to the <a href="#" style="color: var(--gold-primary);">Terms of Service</a> and <a href="#" style="color: var(--gold-primary);">Privacy Policy</a>
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full btn-lg mt-4">
+                    Create Account
+                </button>
+            </form>
+            <p style="text-align: center; margin-top: 24px;">
+                <a href="profile.html" style="font-size: 0.875rem; color: var(--gold-primary);">Go to Dashboard →</a>
+            </p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-copyright">&copy; 2024 - 2026 Stellar Aviators Esports</div>
+                <div class="footer-legal">
+                    <a href="index.html">Home</a>
+                    <a href="teams.html">Teams</a>
+                    <a href="store.html">Store</a>
+                    <a href="profile.html">Dashboard</a>
+                    <a href="admin.html">Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
