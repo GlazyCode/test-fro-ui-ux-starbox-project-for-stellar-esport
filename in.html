@@ -1,0 +1,162 @@
+<div class="min-h-screen bg-[#0d0d0d] text-zinc-200 font-sans selection:bg-yellow-500/30">
+  
+  <input type="checkbox" id="modal-review" class="peer hidden" />
+
+  <div class="flex min-h-screen">
+    <aside class="w-64 bg-[#111111] p-6 border-r border-zinc-800 flex flex-col">
+      <div class="text-yellow-500 font-bold text-xl flex items-center gap-2 mb-10">
+        <span class="text-2xl">⭐</span> Star Pay
+      </div>
+      
+      <nav class="flex-1">
+        <p class="text-[10px] text-zinc-500 tracking-widest mb-4 font-semibold">TEAM MANAGER</p>
+        <ul class="space-y-1">
+          <li class="p-3 text-zinc-400 hover:bg-zinc-800/50 rounded-lg cursor-pointer transition-all">Dashboard</li>
+          <li class="p-3 text-zinc-400 hover:bg-zinc-800/50 rounded-lg cursor-pointer transition-all">Divisions</li>
+          <li class="p-3 text-zinc-400 hover:bg-zinc-800/50 rounded-lg cursor-pointer transition-all">All Players</li>
+          <li class="p-3 bg-yellow-500/10 text-yellow-500 border-l-2 border-yellow-500 font-medium rounded-r-lg">Approve Cashouts</li>
+        </ul>
+      </nav>
+
+      <div class="text-zinc-500 text-sm hover:text-zinc-300 cursor-pointer flex items-center gap-2">
+        <span>←</span> Back to Site
+      </div>
+    </aside>
+
+    <main class="flex-1 p-10">
+      <header class="flex justify-between items-center mb-10">
+        <div class="text-sm text-zinc-400">
+          Admin / Team Manager <span class="bg-yellow-500 text-black px-2 py-0.5 rounded text-[10px] font-bold ml-2 uppercase tracking-tight">Esports Management</span>
+        </div>
+        <div class="flex items-center gap-3 text-right">
+          <div class="text-sm font-medium">admin <span class="block text-[10px] text-zinc-500">Administrator</span></div>
+          <div class="w-8 h-8 bg-zinc-800 rounded flex items-center justify-center text-zinc-400">👤</div>
+        </div>
+      </header>
+
+      <section class="mb-10">
+        <h1 class="text-3xl font-bold text-white mb-2">Approve Cashouts</h1>
+        <p class="text-zinc-500">Review and approve withdrawal requests from players</p>
+      </section>
+
+      <div class="grid grid-cols-3 gap-6 mb-10">
+        <div class="bg-[#161a20] p-6 rounded-xl border border-zinc-800/50">
+          <div class="flex justify-between text-zinc-300 text-sm">Pending Review <span class="text-yellow-500/50 text-lg">👁️</span></div>
+          <div class="text-4xl font-bold text-yellow-500 my-4">3</div>
+          <div class="text-xs text-zinc-600">Awaiting approval</div>
+        </div>
+        <div class="bg-[#161a20] p-6 rounded-xl border border-zinc-800/50">
+          <div class="flex justify-between text-zinc-300 text-sm">Total Requests <span class="text-blue-500/50 text-lg">📈</span></div>
+          <div class="text-4xl font-bold text-blue-400 my-4">4</div>
+          <div class="text-xs text-zinc-600">All time</div>
+        </div>
+        <div class="bg-[#161a20] p-6 rounded-xl border border-zinc-800/50">
+          <div class="flex justify-between text-zinc-300 text-sm">Approved <span class="text-emerald-500/50 text-lg">✅</span></div>
+          <div class="text-4xl font-bold text-emerald-500 my-4">1</div>
+          <div class="text-xs text-zinc-600">Completed</div>
+        </div>
+      </div>
+
+      <div class="bg-[#161a20] rounded-xl border border-zinc-800/50 overflow-hidden">
+        <table class="w-full text-left text-sm border-collapse">
+          <thead class="bg-zinc-800/30 text-zinc-500 text-[11px] uppercase tracking-wider">
+            <tr>
+              <th class="p-5 font-semibold">Date</th>
+              <th class="p-5 font-semibold">Player</th>
+              <th class="p-5 font-semibold text-center">Division</th>
+              <th class="p-5 font-semibold">Points</th>
+              <th class="p-5 font-semibold">Peso Equivalent</th>
+              <th class="p-5 font-semibold">GCash</th>
+              <th class="p-5 font-semibold">Status</th>
+              <th class="p-5 font-semibold">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/50">
+            <tr>
+              <td class="p-5 text-zinc-400">Dec 15, 2024</td>
+              <td class="p-5 font-bold text-white">Player Alpha</td>
+              <td class="p-5 text-center"><span class="bg-zinc-800 px-2 py-1 rounded text-[10px]">MLBB</span></td>
+              <td class="p-5 text-yellow-500 font-bold">100000</td>
+              <td class="p-5 text-emerald-500 font-bold">₱400.00</td>
+              <td class="p-5 text-zinc-400 font-mono">09123456789</td>
+              <td class="p-5"><span class="bg-yellow-500/10 text-yellow-500 px-3 py-1 rounded-md text-xs border border-yellow-500/20">Under Review</span></td>
+              <td class="p-5">
+                <label for="modal-review" class="bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-2 rounded-md font-bold text-xs cursor-pointer transition-colors">Review</label>
+                <button class="ml-4 text-zinc-400 hover:text-white transition-colors">✕ Reject</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <div class="fixed inset-0 z-[9999] hidden peer-checked:flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+    <div class="bg-[#121417] w-full max-w-[900px] rounded-2xl border border-zinc-800 shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-300">
+      
+      <header class="p-8 border-b border-zinc-800/50 flex justify-between items-start">
+        <div>
+          <h2 class="text-xl font-bold text-white">Review Withdrawal Request</h2>
+          <p class="text-zinc-500 text-sm mt-1">Verify the withdrawal slip before approving the request</p>
+        </div>
+        <label for="modal-review" class="bg-zinc-800 hover:bg-zinc-700 p-2 rounded-lg cursor-pointer transition-colors">✕</label>
+      </header>
+
+      <div class="p-8 grid grid-cols-2 gap-10 overflow-y-auto max-h-[70vh]">
+        <div class="space-y-6">
+          <h3 class="text-yellow-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+            <span class="text-base">👤</span> Request Details
+          </h3>
+          
+          <div class="space-y-4">
+            <div class="bg-[#1c1e22] border border-zinc-800 p-4 rounded-xl">
+              <span class="block text-[10px] text-zinc-500 uppercase mb-1 font-bold">Date Submitted</span>
+              <div class="text-sm font-medium">📅 Dec 15, 2024</div>
+            </div>
+            <div class="bg-[#1c1e22] border border-zinc-800 p-4 rounded-xl">
+              <span class="block text-[10px] text-zinc-500 uppercase mb-1 font-bold">Player Name</span>
+              <div class="text-sm font-medium">Player Alpha</div>
+            </div>
+            <div class="bg-[#1c1e22] border border-zinc-800 p-4 rounded-xl">
+              <span class="block text-[10px] text-zinc-500 uppercase mb-1 font-bold">Division</span>
+              <span class="inline-block bg-zinc-800 px-2 py-0.5 rounded text-[10px] mt-1">MLBB</span>
+            </div>
+            <div class="bg-[#1c1e22] border border-zinc-800 p-4 rounded-xl">
+              <span class="block text-[10px] text-zinc-500 uppercase mb-1 font-bold text-yellow-500/50">Points to Convert</span>
+              <div class="text-lg font-bold text-yellow-500">100000</div>
+            </div>
+            <div class="bg-[#1c1e22] border border-zinc-800 p-4 rounded-xl">
+              <span class="block text-[10px] text-zinc-500 uppercase mb-1 font-bold text-emerald-500/50">Peso Equivalent</span>
+              <div class="text-lg font-bold text-emerald-500">₱ 400.00</div>
+            </div>
+            <div class="bg-[#1c1e22] border border-zinc-800 p-4 rounded-xl">
+              <span class="block text-[10px] text-zinc-500 uppercase mb-1 font-bold">GCash Number</span>
+              <div class="text-sm font-mono">09123456789</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-6">Digital Withdrawal Slip</h3>
+          <div class="bg-black border border-zinc-800 p-6 rounded-2xl text-center group">
+            <div class="aspect-[3/4] bg-zinc-900 rounded-lg flex items-center justify-center border border-dashed border-zinc-700 overflow-hidden">
+                <img src="https://via.placeholder.com/300x400/18181b/ffffff?text=Figma+Export+Here" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <p class="text-[10px] text-zinc-600 mt-4 italic font-medium">Click image to view full size</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="p-6 bg-[#16181d] border-t border-zinc-800/50 flex justify-end gap-3">
+        <label for="modal-review" class="bg-zinc-800 hover:bg-zinc-700 text-white px-6 py-2.5 rounded-lg font-bold text-sm cursor-pointer transition-all">Cancel</label>
+        <button class="border border-red-900/50 hover:bg-red-500/10 text-red-500 px-6 py-2.5 rounded-lg font-bold text-sm transition-all flex items-center gap-2">
+            <span class="text-base">ⓧ</span> Reject
+        </button>
+        <button class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-yellow-500/10 flex items-center gap-2">
+            <span class="text-base">✔</span> Approve Request
+        </button>
+      </footer>
+    </div>
+  </div>
+
+</div>
